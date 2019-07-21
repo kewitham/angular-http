@@ -1,0 +1,11 @@
+<section class="filter-wrapper">
+ <div class="keyword-wrapper">
+<input [formControl]="queryField" type="text" id="keyword" placeholder="search for books..." autofocus/>
+  </div>
+<ul class="category">
+    <li *ngFor="let v of category; let i = index">
+    
+    <a (click)="addVolume(v.categoryId)">  {{v.volumeInfo.title}}</a>
+    </li>
+    </ul>
+</section>
